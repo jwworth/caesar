@@ -21,7 +21,14 @@ Encryption:
 
 ```elixir
 iex> Caesar.Encryptor.encrypt("OPERATION GOLDEN YAK", 2)
-"QRGTCVKQP IQNFGP ACM""
+"QRGTCVKQP IQNFGP ACM"
+```
+
+Decryption:
+
+```elixir
+iex> Caesar.Decryptor.decrypt("QRGTCVKQP IQNFGP ACM", 2)
+"OPERATION GOLDEN YAK"
 ```
 
 ### Tests
