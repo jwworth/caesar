@@ -1,20 +1,35 @@
 # Caesar
 
-**TODO: Add description**
+Implements the [Caesar
+Cipher](http://www.practicalcryptography.com/ciphers/classical-era/caesar/) in
+Elixir.
 
-## Installation
+This project was written for learning purposes. Don't use the Caesar cipher;
+it's extremely vunlerable.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+### Installation
 
-  1. Add caesar to your list of dependencies in `mix.exs`:
+```sh
+$ git clone https://github.com/jwworth/ceasar
+$ cd caesar
+$ iex -S mix
+```
 
-        def deps do
-          [{:caesar, "~> 0.0.1"}]
-        end
+### Usage
 
-  2. Ensure caesar is started before your application:
+Encryption:
 
-        def application do
-          [applications: [:caesar]]
-        end
+```elixir
+iex> Caesar.Encryptor.encrypt("OPERATION GOLDEN YAK", 2)
+"QRGTCVKQP IQNFGP ACM""
+```
 
+### Tests
+
+```sh
+$ mix test
+```
+
+### License
+
+Caesar is released under the [MIT License](http://www.opensource.org/licenses/MIT).
