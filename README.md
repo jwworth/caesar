@@ -5,7 +5,7 @@ Cipher](http://www.practicalcryptography.com/ciphers/classical-era/caesar/) in
 Elixir.
 
 This project was written for learning purposes. Don't use the Caesar cipher;
-it's extremely vunlerable.
+it's extremely vulnerable.
 
 ### Installation
 
