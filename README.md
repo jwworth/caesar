@@ -10,7 +10,7 @@ it's extremely vulnerable.
 ### Installation
 
 ```sh
-$ git clone https://github.com/jwworth/ceasar
+$ git clone https://github.com/jwworth/caesar
 $ cd caesar
 $ iex -S mix
 ```
