@@ -31,6 +31,20 @@ iex> Caesar.Decryptor.decrypt("QRGTCVKQP IQNFGP ACM", 2)
 "OPERATION GOLDEN YAK"
 ```
 
+Negative numbers work too:
+
+```elixir
+iex> Caesar.Encryptor.encrypt("OPERATION GOLDEN YAK", -26)
+"OPERATION GOLDEN YAK"
+```
+
+As does punctuation:
+
+```elixir
+iex> Caesar.Encryptor.encrypt("BACK TO BASE!", 2)
+"DCEM VQ DCUG!"
+```
+
 ### Tests
 
 ```sh

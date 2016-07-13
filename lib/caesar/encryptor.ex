@@ -9,6 +9,12 @@ defmodule Caesar.Encryptor do
       iex> Caesar.Encryptor.encrypt("OPERATION GOLDEN YAK", 2)
       "QRGTCVKQP IQNFGP ACM"
 
+      iex> Caesar.Encryptor.encrypt("OPERATION GOLDEN YAK", -26)
+      "OPERATION GOLDEN YAK"
+
+      iex> Caesar.Encryptor.encrypt("BACK TO BASE!", 2)
+      "DCEM VQ DCUG!"
+
   """
   def encrypt(string, rotation) do
     encrypt(String.split(String.upcase(string), ""), rotation, :+, [])
