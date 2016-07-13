@@ -3,6 +3,8 @@ defmodule Caesar.Encryptor do
   Provides the `encrypt` function.
   """
 
+  @caesar_map ~w/A B C D E F G H I J K L M N O P Q R S T U V W X Y Z/
+
   @doc """
   Encrypts a string.
 
@@ -25,17 +27,12 @@ defmodule Caesar.Encryptor do
   end
 
   def encrypt([h|t], rotation, operator, result) do
-    caesar_map = [ A: 0, B: 1, C: 2, D: 3, E: 4, F: 5, G: 6, H: 7, I: 8, J: 9,
-      K: 10, L: 11, M: 12, N: 13, O: 14, P: 15, Q: 16, R: 17, S: 18, T: 19, U:
-      20, V: 21, W: 22, X: 23, Y: 24, Z: 25 ]
-
-    index = Access.get(caesar_map, String.to_atom(h), nil)
+    index = Enum.find_index(@caesar_map, fn(n) -> n == h end)
 
     replacement =
       if index do
         adjustment = apply(Kernel, operator, [index, rotation])
-        { replacement, _ } = (Enum.at(caesar_map, rem((adjustment), 26)))
-        Atom.to_string(replacement)
+        Enum.at(@caesar_map, rem(adjustment, 26))
       else
         h
       end
