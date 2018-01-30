@@ -26,8 +26,8 @@ defmodule Caesar.Encryptor do
     List.to_string(result)
   end
 
-  def encrypt([h|t], rotation, operator, result) do
-    index = Enum.find_index(@caesar_map, fn(n) -> n == h end)
+  def encrypt([h | t], rotation, operator, result) do
+    index = Enum.find_index(@caesar_map, fn n -> n == h end)
 
     replacement =
       if index do
