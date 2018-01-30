@@ -3,7 +3,7 @@ defmodule Caesar.Decryptor do
   Provides the `decrypt` function.
   """
 
-  import Caesar.Encryptor, only: [ encrypt: 4 ]
+  import Caesar.Encryptor, only: [encrypt: 4]
 
   @doc """
   Decrypts a string.
